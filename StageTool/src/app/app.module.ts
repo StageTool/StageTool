@@ -2,8 +2,10 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { PagePage } from '../pages/page/page';
-import { Page2Page } from '../pages/page2/page2';
+import { HomePage } from '../pages/home/home';
+import { CartPage } from '../pages/cart/cart';
+import { CloudPage } from '../pages/cloud/cloud';
+import { LoginPage } from '../pages/login/login';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -12,8 +14,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    PagePage,
-    Page2Page
+    HomePage,
+    CartPage,
+    CloudPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -22,8 +26,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    PagePage,
-    Page2Page
+    HomePage,
+    CartPage,
+    CloudPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

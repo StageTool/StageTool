@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { CartPage } from '../pages/cart/cart';
+import { CloudPage } from '../pages/cloud/cloud';
 
 
-import { PagePage } from '../pages/page/page';
+import { HomePage } from '../pages/home/home';
 
 
 
@@ -13,8 +15,8 @@ import { PagePage } from '../pages/page/page';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  
-    rootPage:any = PagePage;
+  @ViewChild(Nav) navCtrl: Nav;
+    rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -24,5 +26,14 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-  
+  goToHome(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(HomePage);
+  }goToCart(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(CartPage);
+  }goToCloud(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(CloudPage);
+  }
 }
