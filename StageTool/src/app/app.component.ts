@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { CartPage } from '../pages/cart/cart';
 import { CloudPage } from '../pages/cloud/cloud';
 
-
+import { ContactmomentPage } from '../pages/contactmoment/contactmoment';
 import { HomePage } from '../pages/home/home';
 
 
@@ -35,5 +35,9 @@ export class MyApp {
   }goToCloud(params){
     if (!params) params = {};
     this.navCtrl.setRoot(CloudPage);
+  }
+  goToContactmoment(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(ContactmomentPage);
   }
 }

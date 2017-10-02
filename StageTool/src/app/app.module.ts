@@ -5,11 +5,21 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CartPage } from '../pages/cart/cart';
 import { CloudPage } from '../pages/cloud/cloud';
-import { LoginPage } from '../pages/login/login';
-
+import { ContactmomentPage } from '../pages/contactmoment/contactmoment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyC1E_CsLR9CHtSxcmUkBibNwfchw-6Yk5Q",
+    authDomain: "stagetool-c8ed6.firebaseapp.com",
+    databaseURL: "https://stagetool-c8ed6.firebaseio.com",
+    projectId: "stagetool-c8ed6",
+    storageBucket: "stagetool-c8ed6.appspot.com",
+    messagingSenderId: "438475326381"
+  };
 
 @NgModule({
   declarations: [
@@ -17,11 +27,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     CartPage,
     CloudPage,
-    LoginPage
+    ContactmomentPage,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,7 +41,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     CartPage,
     CloudPage,
-    LoginPage
+    ContactmomentPage,
   ],
   providers: [
     StatusBar,
