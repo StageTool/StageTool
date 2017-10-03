@@ -34,22 +34,15 @@
     <ion-radio value="rust"></ion-radio>
   </ion-item>
   <ion-item>
-    <ion-label>Begindatum BPV:</ion-label>
+    <ion-label>Datum Gesprek:</ion-label>
     <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
   </ion-item>
   <ion-item>
-    <ion-label>BPV bedrijf:</ion-label>
-    <ion-input placeholder="bedrijfsnaam"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Praktijk opleider:</ion-label>
-    <ion-input placeholder="opleider"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>BPV docent:</ion-label>
-    <ion-input placeholder="docent"></ion-input>
+    <ion-label>Opmerking:</ion-label>
+    <ion-textarea placeholder="Enter a description"></ion-textarea>
   </ion-item>
 
-  <button ion-button full>opslaan</button>
+
+  <button ion-button full (click)="opslaan()">opslaan</button>
   </ion-list>
 </ion-content>
