@@ -23,26 +23,28 @@
     # contactmoment
   </h3>
   <div class="spacer" style="width:283.2px;height:34px;" id="home-spacer2"></div>
-  <ion-list radio-group>
-  <ion-item>
-    <ion-label>Bezoek</ion-label>
-    <ion-radio checked="true" value="go"></ion-radio>
-  </ion-item>
+  <form (ngSubmit)="SaveData()">
 
-  <ion-item>
-    <ion-label>Telefonisch</ion-label>
-    <ion-radio value="rust"></ion-radio>
-  </ion-item>
+
+
+    <ion-item>
+    <ion-label>Contact vorm</ion-label>
+    <ion-select multiple="false" [(ngModel)]="data.cvorm" name="cvorm">
+    <ion-option value="tel">telefoon</ion-option>
+    <ion-option value="bezoek">bezoek</ion-option>
+    </ion-select>
+    </ion-item>
   <ion-item>
     <ion-label>Datum Gesprek:</ion-label>
-    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="data.date" name="date"></ion-datetime>
   </ion-item>
   <ion-item>
     <ion-label>Opmerking:</ion-label>
-    <ion-textarea placeholder="Enter a description"></ion-textarea>
+    <ion-textarea placeholder="Enter a description" [(ngModel)]="data.text" name="text"></ion-textarea>
   </ion-item>
 
 
-  <button ion-button full>opslaan</button>
-  </ion-list>
+  <button ion-button full type="submit" (click)= "presentToast()">opslaan</button>
+
+</form>
 </ion-content>
