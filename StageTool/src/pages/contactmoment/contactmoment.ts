@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the ContactmomentPage page.
@@ -16,35 +14,12 @@ import { ToastController } from 'ionic-angular';
   templateUrl: 'contactmoment.html',
 })
 export class ContactmomentPage {
-  invoer: FirebaseListObservable<any>;
-  data = { cvorm: " ", date: " ", text: " "};
-  constructor(public navCtrl: NavController, public navParams: NavParams, public af: AngularFireDatabase, public toastCtrl: ToastController) {
-    this.invoer = af.list('/invoer');
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FormulierPage');
+    console.log('ionViewDidLoad ContactmomentPage');
   }
 
-
-
-
-  SaveData() {
-    this.invoer.push({
-      cvorm: this.data.cvorm,
-      date: this.data.cvorm,
-      text: this.data.text
-
-
-    })
-  }
-
-  presentToast() {
-    const toast = this.toastCtrl.create({
-      message: 'Contact moment opgeslagen',
-      duration: 3000,
-      position: 'top'
-    });
-     toast.present();
-  }
 }
