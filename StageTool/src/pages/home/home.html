@@ -1,14 +1,52 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
-      Ionic Blank
+      Gespreks Formulier
     </ion-title>
   </ion-navbar>
 </ion-header>
+<ion-content padding id="page1">
+  <h3 id="home-heading1" style="color:#000000;font-weight:400;">
+    Naam Achternaam
+  </h3>
+  <div class="spacer" style="width:283.2px;height:34px;" id="home-spacer2"></div>
+  <ion-list radio-group>
+  <ion-item>
+    <ion-label>bol</ion-label>
+    <ion-radio checked="true" value="go"></ion-radio>
+  </ion-item>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <ion-label>bbl</ion-label>
+    <ion-radio value="rust"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>BPV bedrijf:</ion-label>
+    <ion-input placeholder="bedrijfsnaam"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Praktijk opleider:</ion-label>
+    <ion-input placeholder="opleider"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>BPV docent:</ion-label>
+    <ion-input placeholder="docent"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Begindatum BPV:</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Andere Gespreksformulier(en):</ion-label>
+  </ion-item>
+  <!-- <ion-item *ngFor="message | async">
+    {(message.title)}
+  </ion-item> -->
+  <button ion-button full on-click="goToContactmoment()">toevoegen/bewerken</button>
+</ion-list>
+
 </ion-content>
