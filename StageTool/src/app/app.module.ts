@@ -13,12 +13,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 export const firebaseConfig = {
-    apiKey: "AIzaSyBCN_t6cCbuPoxQjvQ4V-4hsK257JxqTyo",
-    authDomain: "stagetool-3fa2f.firebaseapp.com",
-    databaseURL: "https://stagetool-3fa2f.firebaseio.com",
-    projectId: "stagetool-3fa2f",
-    storageBucket: "",
-    messagingSenderId: "1051083551226"
+    apiKey: "AIzaSyC1E_CsLR9CHtSxcmUkBibNwfchw-6Yk5Q",
+    authDomain: "stagetool-c8ed6.firebaseapp.com",
+    databaseURL: "https://stagetool-c8ed6.firebaseio.com",
+    projectId: "stagetool-c8ed6",
+    storageBucket: "stagetool-c8ed6.appspot.com",
+    messagingSenderId: "438475326381"
   };
 
 @NgModule({
