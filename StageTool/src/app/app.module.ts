@@ -8,19 +8,17 @@ import { CloudPage } from '../pages/cloud/cloud';
 import { ContactmomentPage } from '../pages/contactmoment/contactmoment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyCn8m646WRNo-M-nNEs8NJnMuHJ1kfVQWg",
-  authDomain: "stagetool-d0c1d.firebaseapp.com",
-  databaseURL: "https://stagetool-d0c1d.firebaseio.com",
-  projectId: "stagetool-d0c1d",
-  storageBucket: "stagetool-d0c1d.appspot.com",
-  messagingSenderId: "11254544018"
-
+    apiKey: "AIzaSyC1E_CsLR9CHtSxcmUkBibNwfchw-6Yk5Q",
+    authDomain: "stagetool-c8ed6.firebaseapp.com",
+    databaseURL: "https://stagetool-c8ed6.firebaseio.com",
+    projectId: "stagetool-c8ed6",
+    storageBucket: "stagetool-c8ed6.appspot.com",
+    messagingSenderId: "438475326381"
   };
 
 @NgModule({
